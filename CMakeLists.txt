@@ -29,8 +29,12 @@ include_directories(PRIVATE
 ${CMAKE_CURRENT_SOURCE_DIR}/include
 )
 
-find_package(zstd REQUIRED)
-target_link_libraries(zarchive PRIVATE zstd::libzstd_static)
+# find_package(zstd REQUIRED)
+# target_link_libraries(zarchive PRIVATE zstd::libzstd_static)
+find_path(/usr/include/ zstd.h)
+# include_directories(/usr/include/)
+# add_library( libzstd.so SHARED /usr/lib/x86_64-linux-gnu/libzstd.so )
+TARGET_LINK_LIBRARIES(zarchive PRIVATE /usr/lib/x86_64-linux-gnu/libzstd.so)
 
 # standalone executable
 add_executable (zarchiveTool src/main.cpp)

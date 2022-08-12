@@ -1,0 +1,1 @@
+/usr/bin/c++ CMakeFiles/zarchiveTool.dir/src/main.cpp.o -o zarchive  libzarchive.a /usr/lib/x86_64-linux-gnu/libzstd.so 
