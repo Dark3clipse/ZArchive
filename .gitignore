@@ -1,5 +1,7 @@
 cmake-build-*/
 .idea
+build/
+
 
 # Visual Studio
 .vs/
